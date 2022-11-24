@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2-2</title>
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+    <style>
+        #container{
+            font-family: sans-serif;
+            font-family: 1.5em;
+        }
+        h1,h2{
+            font-weight: bold;
+        }
+        /*cabecero*/
+        header{
+            min-width: 1500px; /*No funciona con static*/
+            width: 100%;
+            height: 140px;
+            box-sizing: border-box;
+            background-color: grey;
+            position: relative;
+        }
+        header>*{
+            position: absolute;
+            padding: 1%;
+        }
+        header>img:nth-of-type(1){
+            left: 20%;
+        }
+        header>img:nth-of-type(2){
+            right:20%;
+        }
+        header>h1{ 
+            left: 40%;
+            font-size: 4em;
+            text-align: center;
+        }
+        /*mian*/
+        main{
+            width: 100%;
+        }
+        main>*{
+            height:auto;
+            display: inline-block;
+            position: relative;
+        }
+        /*secion*/
+        main>section{
+            height: 750px;
+            width: 60%;
+        }
+        section>h1,h2{
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        section>h1{
+            font-size: 2.5em;
+        }
+        section>h2{
+            font-size: 2em;
+        }
+        section>p:nth-of-type(3),p:nth-of-type(5){
+            text-align: center;
+            margin-top: 10px;
+        }
+        /*Navegador de main*/
+        main>nav{
+            height: 750px;
+            width: 20%;
+            padding: 5px;
+            box-sizing: border-box;
+            vertical-align: top;
+            background-color: #FF0033;
+        }
+        main>nav:nth-of-type(1){
+            float: left;
+        }
+        main>nav:nth-of-type(2){
+            float: right;
+        }
+        nav>*{
+            background: #CCCCCC;
+        }
+        /*Pie de pagina*/
+        footer{
+            height: 78px;
+            box-sizing: border-box;
+            padding-top: 10px;
+            background: grey;
+            text-align: center;
+        }  
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <img src="http://picsum.photos/id/15/100/100" alt="Imagen1">
+            <h1>Cabecera</h1>
+            <img src="http://picsum.photos/id/16/100/100" alt="Imagen2">
+        </header>
+        <main>
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Opciones</a></li>
+                    <li><a href="">Servicio</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>
+            <section>
+                <h1>Mi primer articulo</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab laborum beatae recusandae eligendi facere quo voluptates, voluptatum magni deleniti, voluptate eveniet repellat vitae atque ex aliquid optio autem perferendis ipsa.</p>
+                <h1>Mi segundo articulo</h1>
+                <h2>Subtitulo 2 articulo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto omnis ipsa exercitationem! Enim harum ratione cum cumque aut excepturi eius vero! Dignissimos ab eius ut, vitae delectus distinctio. Laboriosam, quisquam!</p>
+                <p>Comentarios</p>
+                <h1>Mi tercer Articulo</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quibusdam sunt, quo vero ipsa ipsam distinctio officia ullam, cumque nihil vel obcaecati excepturi ab. Quaerat laboriosam dignissimos facere impedit at!</p>
+                <p>Comentarios</p>
+            </section>
+            <nav>
+                <p>Aqui tenemos nuestra seccion de links internos:</p>
+                <p>Elemento Details</p>
+                <details>
+                    <summary>Lista de datos summary</summary>
+                    <p>Esta en un elemento details</p>
+                  </details>
+            </nav>
+        </main>
+        <footer>
+            <p>© Todos los derechos reservados.</p>
+            En proceso
+            <progress value="40" max="100">
+            </progress>
+        </footer>
+    </div>
+</body>
+</html>

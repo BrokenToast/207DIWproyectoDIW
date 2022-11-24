@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: scooby;
+            src: url(true-crimes.ttf);
+        }
+        h1{
+            font-family:"scooby";
+        }
+        /* tabla echa con table */
+        table{
+            width: 100%;
+        }
+        table,td,tr{
+            border-collapse: collapse;
+        }
+        td{
+            border: 2px solid black;
+        }
+        td{
+            text-align: center;;
+        }
+        tr:nth-of-type(2n){
+            border: none;
+            height: 10px;
+        }
+        /* Tabla echa con div */
+        .table{
+            width: 100%;
+        }
+        .row{
+            display: table-row;
+            width: 100%;
+        }
+        .row:nth-of-type(odd)>.cell{
+            width:100vw;
+            display: table-cell;
+            padding: 3px;
+            border: 2px solid black;
+            text-align: center;
+            background-color: aquamarine;
+        }
+        .row>.cell:nth-child(3){
+            background-color: blueviolet;
+        }
+        .row:nth-of-type(2n){
+            height:10px;
+        }
+        .row:nth-of-type(2n)>.cell{
+            padding: none;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabla echa con table</h1>
+    <table>
+        <tr>
+            <td> celada 1 1</td>
+            <td>celada 1 2</td>
+            <td>celada 1 3</td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td>celada 2 1</td>
+            <td>celada 2 2</td>
+            <td>celada 2 3</td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td>celada 3 1</td>
+            <td>celada 3 2</td>
+            <td>celada 3 3</td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td>celada 4 1</td>
+            <td>celada 4 2</td>
+            <td>celada 4 3</td>
+        </tr>
+    </table>
+    <br><br><br><br>
+    <h1>Tabla echa con div</h1>
+    <div class="table">
+        <div class="row">
+            <div class="cell">celada 1 1</div>
+            <div class="cell">celada 1 2</div>
+            <div class="cell">celada 1 3</div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell">celada 2 1</div>
+            <div class="cell">celada 2 2</div>
+            <div class="cell">celada 2 3</div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell">celada 3 1</div>
+            <div class="cell">celada 3 2</div>
+            <div class="cell">celada 3 3</div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell">celada 4 1</div>
+            <div class="cell">celada 4 2</div>
+            <div class="cell">celada 4 3</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+    <style>
+        /*Globales*/
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 40px;
+        }
+        a{  
+            min-width: 100px;min-height: 22px;
+            width: 6vw;height: 4vh;
+            line-height: 4vh;
+            margin-right:2%;
+            padding-left: 10px;
+            padding-right: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-weight: 900;
+        }
+        /*Navegador*/
+        nav>a:nth-of-type(1){
+            background-color: #FF1493;
+        }
+        nav>a:nth-of-type(2){
+            background-color: #BC8F8F;
+        }
+        nav>a:nth-of-type(3){
+            background-color: #FF6347;
+        }
+        /*Section*/
+        section>article{
+            min-height: 180px;
+            width: 100%; height: 20vh;
+            padding-bottom: 50%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            font-family: sans-serif;
+        }
+        section>article:nth-of-type(1){
+            background-color: #808080;
+        }
+        section>article:nth-of-type(2){
+            background-color: #FF8C00;
+        }
+        section>article:nth-of-type(3){
+            background-color: #00CED1;
+        }
+        article a{
+            border-radius: 10px;
+            background-color: green;
+            color: white;
+        }
+        article p{
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        article h1{
+            font-size: 1.6em;
+            font-weight: 700;
+        }
+        article:target{
+            height: 100vh;
+            color: yellow;
+            font-size: 1.4em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div id="INI">
+        <nav>
+            <a href="#A1">Primero</a>
+            <a href="#A2">Segundo</a>
+            <a href="#A3">Tercero</a>
+        </nav>
+        <section>
+            <article id="A1">
+                <h1>Articulo UNO</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A sit, optio accusantium dolorum itaque magni iure excepturi quia maiores quidem sunt consequatur suscipit doloribus consectetur assumenda fugit architecto, porro fuga?</p>
+                <a href="#INI">Volver</a>
+            </article>
+            <article id="A2">
+                <h1>Articulo DOS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A sit, optio accusantium dolorum itaque magni iure excepturi quia maiores quidem sunt consequatur suscipit doloribus consectetur assumenda fugit architecto, porro fuga?</p>
+                <a href="#INI">Volver</a>
+            </article>
+            <article id="A3">
+                <h1>Articulo TRES</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A sit, optio accusantium dolorum itaque magni iure excepturi quia maiores quidem sunt consequatur suscipit doloribus consectetur assumenda fugit architecto, porro fuga?</p>
+                <a href="#INI">Volver</a>
+            </article>
+        </section>
+    </div>
+</body>
+</html>

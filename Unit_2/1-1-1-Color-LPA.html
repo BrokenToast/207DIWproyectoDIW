@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        table{
+            width: auto;
+        }
+        td{
+            height: 2.5em;
+            width: 30em;
+            background-color: aqua;
+            text-align: center;
+        }
+        /*Tabla 1*/
+        div:nth-child(1) td:nth-child(1){
+            background-color:#FF0000;
+        }
+        div:nth-child(1) td:nth-child(2){
+            background-color:#00ff00;
+        }
+        div:nth-child(1) td:nth-child(3){
+            background-color:#0000ff;
+        }
+        /*Tabla 2*/
+        div:nth-child(2) td:nth-child(1){
+            background-color:#FFff00;
+        }
+        div:nth-child(2) td:nth-child(2){
+            background-color:#FF0000;
+        }
+        div:nth-child(2) td:nth-child(3){
+            background-color:#FF00ff;
+        }
+        div:nth-child(2) td:nth-child(4){
+            background-color:#0000ff;
+        }
+        div:nth-child(2) td:nth-child(5){
+            background-color:#00ffff;
+        }
+        div:nth-child(2) td:nth-child(6){
+            background-color:#00ff00;
+        }
+        /*Tabla 3*/
+        div:nth-child(3) tr:nth-child(2) td:nth-child(1){
+            background-color:#ffff80;
+        }
+        div:nth-child(3) tr:nth-child(2) td:nth-child(2){
+            background-color:#ff8080;
+        }
+        div:nth-child(3) tr:nth-child(2) td:nth-child(3){
+            background-color:#ff80ff;
+        }
+        div:nth-child(3) tr:nth-child(2) td:nth-child(4){
+            background-color:#8080ff;
+        }
+        div:nth-child(3) tr:nth-child(2) td:nth-child(5){
+            background-color:#80ffff;
+        }
+        div:nth-child(3) tr:nth-child(2) td:nth-child(6){
+            background-color:#80ff80;
+        }
+        div:nth-child(3) tr:nth-child(3) td:nth-child(1){
+            background-color:#ffffC0;
+        }
+        div:nth-child(3) tr:nth-child(3) td:nth-child(2){
+            background-color:#ffC0C0;
+        }
+        div:nth-child(3) tr:nth-child(3) td:nth-child(3){
+            background-color:#ffC0ff;
+        }
+        div:nth-child(3) tr:nth-child(3) td:nth-child(4){
+            background-color:#C0C0ff;
+        }
+        div:nth-child(3) tr:nth-child(3) td:nth-child(5){
+            background-color:#C0ffff;
+        }
+        div:nth-child(3) tr:nth-child(3) td:nth-child(6){
+            background-color:#C0ffC0;
+        }
+        /*Tabla 4*/
+        div:nth-child(4) tr:nth-child(2) td:nth-child(1){
+            background-color:#C0C000;
+        }
+        div:nth-child(4) tr:nth-child(2) td:nth-child(2){
+            background-color:#00C000;
+        }
+        div:nth-child(4) tr:nth-child(2) td:nth-child(3){
+            background-color:#C000C0;
+        }
+        div:nth-child(4) tr:nth-child(2) td:nth-child(4){
+            background-color:#0000C0;
+        }
+        div:nth-child(4) tr:nth-child(2) td:nth-child(5){
+            background-color:#00C0C0;
+        }
+        div:nth-child(4) tr:nth-child(2) td:nth-child(6){
+            background-color:#008000;
+        }
+        div:nth-child(4) tr:nth-child(3) td:nth-child(1){
+            background-color:#808000;
+        }
+        div:nth-child(4) tr:nth-child(3) td:nth-child(2){
+            background-color:#008000;
+        }
+        div:nth-child(4) tr:nth-child(3) td:nth-child(3){
+            background-color:#800080;
+        }
+        div:nth-child(4) tr:nth-child(3) td:nth-child(4){
+            background-color:#000080;
+        }
+        div:nth-child(4) tr:nth-child(3) td:nth-child(5){
+            background-color:#008080;
+        }
+        div:nth-child(4) tr:nth-child(3) td:nth-child(6){
+            background-color:#008000;
+        }
+    </style>
+    <title>Practica2-1</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th colspan="3"><h2>Colores Primarios</h2></th>
+            </tr>
+            <tr>
+               <td>#FF0000</td>
+               <td>#00FF00</td>
+               <td>#0000FF</td> 
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th colspan="6"><h2>Colores Secundarios</h2></th>
+            </tr>
+            <tr>
+               <td>#FFFF00</td>
+               <td>#FF0000</td>
+               <td>#FF00FF</td>
+               <td>#0000FF</td>
+               <td>#00FFFF</td>
+               <td>#00FF00</td> 
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th colspan="6"><h2>Para hacer los colores mas claros Suma en Hexadecimal</h2></th>
+            </tr>
+            <tr>
+               <td>#FFFF80</td>
+               <td>#FF8080</td>
+               <td>#FF80FF</td>
+               <td>#8080FF</td>
+               <td>#80FFFF</td>
+               <td>#80FF80</td>
+            </tr>
+            <tr>
+                <td>#FFFFC0</td>
+                <td>#FFC0C0</td>
+                <td>#FFC0FF</td>
+                <td>#C0C0FF</td>
+                <td>#C0FFFF</td>
+                <td>#C0FFC0</td>
+             </tr>
+        </table>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th colspan="6"><h2>Para hacer los colores mas oscuros Resta en Hexadecimal</h2></th>
+            </tr>
+            <tr>
+               <td>#C0C000</td>
+               <td>#00C000</td>
+               <td>#C000C0</td>
+               <td>#0000C0</td>
+               <td>#00C0C0</td>
+               <td>#00C000</td>
+            </tr>
+            <tr>
+                <td>#808000</td>
+                <td>#008000</td>
+                <td>#800080</td>
+                <td>#000080</td>
+                <td>#008080</td>
+                <td>#008000</td>
+             </tr>
+        </table>
+    </div>
+</body>
+</html>

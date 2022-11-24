@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*Varaibles Gloabales*/
+    /*Globales*/
+    body{
+        background-color: black;
+        font-family:sans-serif;
+        font-size: 1.2.5em;
+        font-weight: bold;
+    }
+    /*Apartado 1*/
+    #apartado1>nav>*{
+            min-width: 175px;
+            width: 10%;
+            box-sizing: border-box;
+            padding: 15px 20px 15px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            display: block;
+            position: relative;
+            background-color: rgb(255, 124, 146);
+            transition:all 1s cubic-bezier(0.4, 0.6, 1, 1);
+            text-align: center;
+            text-decoration: none;
+            color: white;
+    }
+    #apartado1>nav>a:hover{
+        background-color: purple;
+        transform: translate(40px);
+    }
+    /*apartado2link*/
+    #apartado2{
+        min-width: 700px;
+        width: 40%;
+        margin:50px auto;
+    }
+    #apartado2>nav>*{
+        width: calc(90%/4);
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 15px 4px 15px 4px;
+        display: inline-block ;
+        background-color: hotpink;
+        text-align: center;
+        color: white;
+    }
+    #apartado2 a:hover{
+        background-color: green;
+    }
+    #apartado2 a:active{
+        background-color: blue;
+    }
+    #apartado2 a:visited{
+        color: crimson;
+    }
+    #apartado2 a:link{
+        color: white;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="apartado1">
+        <nav>
+            <a href="">Primera opcion</a>
+            <a href="">Segundo opcion</a>
+            <a href="">Tercero opcion</a>
+            <a href="">Cuarto opcion</a>
+            <a href="">Quinta opcion</a>
+        </nav>
+    </div>
+    <div id="apartado2">
+        <nav>
+            <a href="https://www.google.es/" target="_blank">Inicio</a>
+            <a href="https://www.amazon.es/">Secretaria</a>
+            <a href="https://www.audi.es/es/web/es/modelos.html">Alumnos</a>
+            <a href="https://www.raspberrypi.com/">Contacto</a>
+        </nav>
+    </div>
+</body>
+</html>

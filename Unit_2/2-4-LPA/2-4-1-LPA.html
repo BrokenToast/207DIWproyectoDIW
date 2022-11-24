@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            font-family: sans-serif;
+        }
+        p{
+            min-width: 200px;
+            width: 10%;
+            padding: 5px; 
+            background-color: #BBBBBB;
+        }
+        /*columnas*/
+        main{
+            min-width: 520px;
+            width: 30%;
+            padding-left: 35vw;
+        }
+        #colum1{
+         float: left; 
+        }
+        #colum2{
+            float: right;
+        }
+        /*Apartado 1*/
+        #apartado1>p:first-child{
+            background-color: #115599;
+        }
+        #apartado1>p:last-child{
+            background-color: #995511;
+        }
+        /*Apartado 2*/
+        #apartado2 li:nth-child(3n+2){
+            background-color: red;
+        }
+        #apartado2 li:nth-last-child(3){
+            background-color: #BC8F8F;
+        }
+        /*Apartado 3*/
+        #apartado3 p:only-child{
+            padding: 10px;
+            background-color: #7CFC00;
+        }
+        /*Apartado 4*/
+        #apartado4 p:first-of-type{
+            background-color: #87CEEB;
+        }
+        #apartado4 span:first-of-type{
+            display: block;
+            background-color: #e99157;
+        }
+        #apartado4 div:first-of-type{
+            background-color: yellow;
+        }
+        #apartado4 p:last-of-type{
+            background-color: rgb(191, 95, 194);
+        }
+        #apartado4 p:not(:first-of-type):not(:last-of-type){
+            background-color: cadetblue;
+        }
+        /*Apartado 5*/
+        #apartado5 p:nth-child(3){
+            background-color: #273586;
+            color: white;
+        }
+        #apartado5 strong:nth-last-child(3){
+            background-color: #B8860B;
+            color: white;
+        }
+        /*Apartado 6*/
+        #apartado6 span:only-child{
+            background-color: #FE5633;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="colum1">
+            <h1>Pseudo-clases</h1>
+            <div id="apartado1">
+                <p>Paragraph 1</p>
+                <p>Paragraph 2</p>
+                <p>Paragraph 3</p>
+                <p>Paragraph 4</p>
+            </div>
+            <div id="apartado2">
+                <ul>
+                    <li>Opntion 1</li>
+                    <li>Opntion 2</li>
+                    <li>Opntion 3</li>
+                    <li>Opntion 4</li>
+                    <li>Opntion 5</li>
+                    <li>Opntion 6</li>
+                </ul>
+            </div>
+            <div id="apartado3">
+                <p>single Paragraph</p>
+            </div>
+        </div>
+        <div id="colum2">
+            <div id="apartado4">
+                <p>Paragraph 1</p>
+                <span>text in span</span>
+                <p>Paragraph 2</p>
+                <strong>Text in Strong</strong>
+                <div>This is a div</div>
+                <p>Paragraph 3</p>
+            </div>
+            <div id="apartado5">
+                <p>Paragraph 1</p>
+                <span>text in span</span>
+                <p>Paragraph 2</p>
+                <strong>Text in Strong</strong>
+                <div>This is a div</div>
+                <p>Paragraph 3</p>
+            </div>
+            <div id="apartado6">
+                <p>Paragraph 1</p>
+                <span>text in span</span>
+                <p>Paragraph 2</p>
+                <p>Paragraph 3</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

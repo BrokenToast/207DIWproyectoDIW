@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:calc(70%/6);height: 120px;
+            line-height: 120px;
+            margin: 1.5%;
+            display: inline-block;
+            background-color: #800080;
+            text-align: center;
+            vertical-align: middle;
+        }
+        /*Colorea el cuadro número 6*/
+        /* div:nth-child(6){
+            background-color: #008000;
+        } */
+        /*Colorea los cuadros 3, 6, 9, 12, 15 y 18*/
+        /* div:nth-child(3n):nth-child(-n+18){
+            background-color: orange;
+        } */
+        /*Colorea los cuadros del 8 al 20*/
+        /* div:nth-child(n+8):nth-child(-n+20){
+            background-color: pink;
+        } */
+        /*Colorea los cuadros  5, 8, 11, 14, 17, 20 , 23*/
+        /* div:nth-child(3n+5){
+            background-color: aqua;
+        } */
+        /* Colorea los cuadros 3 y 12  */
+        /* div:nth-child(9n+3):nth-child(-n+12){
+            background-color: chartreuse;
+        } */
+        /* Colorea el 12 y el 18 */
+        div:nth-child(6n+12):nth-child(-n+18){
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <main>
+       <div>1</div>
+       <div>2</div>
+       <div>3</div>
+       <div>4</div>
+       <div>5</div>
+       <div>6</div>
+       <div>7</div>
+       <div>8</div>
+       <div>9</div>
+       <div>10</div>
+       <div>11</div>
+       <div>12</div>
+       <div>13</div>
+       <div>14</div>
+       <div>15</div>
+       <div>16</div>
+       <div>17</div>
+       <div>18</div>
+       <div>19</div>
+       <div>20</div>
+       <div>21</div>
+       <div>22</div>
+       <div>23</div>
+       <div>24</div>
+       <div>25</div>
+    </main>
+</body>
+</html>
