@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-5-LPA</title>
+    <style>
+        /*Global*/
+        *{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            padding-top: 20vh;
+            display: flex;
+            justify-content: center;
+        }
+        /*Formaulario*/
+        form{
+            background-color:#FFF5A0;
+        }
+        fieldset:nth-child(1)>label{
+            display: block;
+            margin-bottom: 0.5vh;
+        }
+        input[type="text"]{
+            padding:4% 0%;
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+        input[type="text"]:nth-of-type(1){
+            min-width: 255px;
+            width: 13vw;
+            background-color: #66CDAA;
+        }
+        input[type="text"]:nth-of-type(2){
+            min-width: 280px;
+            width: 15vw;
+            background-color: white;
+        }
+        input[type="email"]:nth-of-type(3){
+            min-width: 380px;
+            width: 20vw;
+            padding:4% 0%;
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+        input[type="text"]:nth-of-type(4){
+            min-width: 200px;
+            width: 10vw;
+            background-color: #BBBBBB;
+        }
+        input:focus{
+            -webkit-box-shadow: 5px 9px 46px 17px #00D1FF; 
+            box-shadow: 5px 9px 46px 17px #00D1FF;
+            background-color: rgb(0, 255, 42)!important;
+        }
+        ::placeholder{
+            color: black;
+        }
+        /*:valid/ :invalid*/
+        input[type="email"]:valid{
+            background-color: #22FF55 !important;
+        }
+        input[type="email"]:invalid{
+            background-color: rgb(167, 45, 45) !important;
+        }
+        /*:checked*/
+        input[type="checkbox"]:checked{
+            box-shadow: 0px 0px 14px 6px #3663FF;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Pseudo-clase en formularios</legend>
+            <label>:required</label>
+            <input type="text" name="required" id=":required" placeholder="Nombre" required>
+            <label>:focus</label>
+            <input type="text" name="focus" id=":focus" placeholder="Apellidos" maxlength="100" minlength="10">
+            <label>:valid/ :invalid</label>
+            <input type="email" name="valid" id=":valid" placeholder="mail@mail.com" pattern="[a-zA-ZñÑ]{2,15}@[a-zA-ZñÑ]{2,10}.[a-z]{2,6}">
+            <label>:disable</label>
+            <input type="text" name="disable" id=":disable" placeholder="este input esta en disable" disabled>
+            <fieldset>
+                <legend>:checked</legend>
+                <label for="sexo">Sexo:</label>
+                <input type="checkbox" name="sexo" id="sexo" value="hombre">
+                <label for="sexo">Hombre</label>
+                <input type="checkbox" name="sexo" id="sexo" value="mujer">
+                <label for="sexo">Mujer</label>
+            </fieldset>
+            <fieldset>
+                <legend>:default</legend>
+                <input type="radio" name="opcion" id="opcion1" value="opcion1">
+                <label for="opcion1">Opcion 1</label>
+                <input type="radio" name="opcion" id="opcion2" value="opcion2" autocomplete="on">
+                <label for="opcion2">Opcion 2</label>
+                <input type="radio" name="opcion" id="opcion3" value="opcion3">
+                <label for="opcion3">Opcion 3</label>
+            </fieldset>
+            <fieldset>
+                <legend>:in-range / :out-of-range</legend>
+                <label for="edad">Edad(1-120)</label>
+                <input type="number" name="edad" id="edad" min="1" max="120">
+            </fieldset>
+            <input type="submit" name="enviar" value="Enviar">
+        </fieldset>
+    </form>
+</body>
+</html>
