@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>2-5-1-LPA</title>
     <style>
         body{
+            padding-left: 50px;
             font-size: 1.6em;
         }
         /*Ejercicio1 1*/
@@ -22,21 +23,21 @@
             display: inline;
         }
         p::before{
-            content: url(../doc/kirby.png);
+            content: url(https://picsum.photos/id/23/50/50);
         }
         p::after{
-            content: url(../doc/ordenador_Mono.png);
+            content: url(https://picsum.photos/id/24/50/50);
         }
         /*Ejercicio1 3*/
         ul:nth-of-type(2){
             list-style-type: none;
         }
         ul:nth-of-type(2)>li:nth-of-type(2n+1)::before{
-            content: "$$ ";
+            content: "$$$ ";
             color: rgb(204, 204, 6);
         }
         ul:nth-of-type(2)>li:nth-of-type(2n)::before{
-            content: "€€ ";
+            content: "€€€ ";
             color: green;
         }
     </style>
