@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 1.6em;
+        }
+        /*Ejercicio1 1*/
+        ul:nth-of-type(1){
+            list-style-type: none;
+        }
+        ul:nth-of-type(1)>li::before{
+            content: "** ";
+            color: red;
+        }
+        /*Ejercicio1 2*/
+        div>img,p{
+            display: inline;
+        }
+        p::before{
+            content: url(../doc/kirby.png);
+        }
+        p::after{
+            content: url(../doc/ordenador_Mono.png);
+        }
+        /*Ejercicio1 3*/
+        ul:nth-of-type(2){
+            list-style-type: none;
+        }
+        ul:nth-of-type(2)>li:nth-of-type(2n+1)::before{
+            content: "$$ ";
+            color: rgb(204, 204, 6);
+        }
+        ul:nth-of-type(2)>li:nth-of-type(2n)::before{
+            content: "€€ ";
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+        <li>Cuarto Elemento</li>
+    </ul>
+    <div><p>Primer elemento</p></div>
+    <div><p>Segundo elemento</p></div>
+    <div><p>Tercer elemento</p></div>
+    <div><p>Cuarto Elemento</p></div>
+    <ul>
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+        <li>Cuarto Elemento</li>
+    </ul>
+</body>
+</html>
