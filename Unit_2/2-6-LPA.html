@@ -7,35 +7,29 @@
     <title>2-6-LPA</title>
     <style>
         *{
-            box-sizing: border-box;
+            box-sizing: content-box;
         }
         #contenedor{
-            min-width: none; min-height: none;
-            max-width: 484px;max-height: 463px;
-            width: 50vw;
-            height: 50vh;
+            width: 50%;
+            height: 50%;
         }
         #contenedor>div{
-            width:25vw;
-            height: 25vh;
+            width:25%;
+            height: 25%;
             padding-left: 10px;
             position: absolute;
             font-size: 3em;
         }
         #contenedor>div:nth-of-type(1){
-            min-width: none; min-height: none;
-            max-width: 239px;max-height: 278px ;
-            height: 30vh;
+            height: 30%;
             left: 25.5%;
             z-index: 4;
             background-color: #EF476F;
             text-align: right;
         }
         #contenedor>div:nth-of-type(2){
-            min-width: none; min-height: none;
-            max-width: 191px ;max-height:185px ;
-            width:20vw;
-            height: 20vh;
+            width:20%;
+            height: 20%;
             left: 15%;
             top: 15%;
             background-color: #FFD166;
@@ -43,29 +37,26 @@
             text-align: center;
         }
         #contenedor>div:nth-of-type(3){
-            min-width: none; min-height: none;
-            max-width: 239px;max-height:231px;
-            left: 25.5%;
+            left: 25.4%;
             top:25.5%;
             background-color: #118AB2;
             z-index: 3;
         }
         #contenedor>div:nth-of-type(4){
-            min-width: none; min-height: none;
-            max-width: 239px;max-height:277px ;
-            width:25vw;
-            height: 30vh;
+            width:25%;
+            height: 30%;
             top: 20.4%;
             background-color: #8B5BD3;
             z-index: 2;
         }
         #contenedor>div:nth-of-type(5){
-            min-width: none; min-height: none;
-            max-width:325px ;max-height:324px;
-            width:34vw;
-            height: 35vh;
+            width:26%;
+            height: 26%;
             background-color: #06D6A0;
-            z-index: -1;
+            z-index: 1;
+        }
+        #contenedor>div:hover{
+            z-index: 10;
         }
     </style>
 </head>

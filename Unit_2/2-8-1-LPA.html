@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        #container{
+            width: 70vw; height: 40vh;
+            margin: auto;
+            margin-top: 50px;
+        }
+        ul{
+            list-style: none;
+        }
+        ul>li{
+            display: inline-block;
+        }
+        ul a{
+            min-width:89px; min-height: 35px;
+            width: 5vw;height: 2vw;
+            line-height: 2vw;
+            padding: 3px;
+            margin-right:2vw;
+            border-radius: 3px 3px 0px 0px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        ul>li:nth-of-type(1)>a{
+            background-color: #67E767;
+        }
+        ul>li:nth-of-type(2)>a{
+            background-color: #5178E4;
+        }
+        ul>li:nth-of-type(3)>a{
+            background-color: #EBB7D9;
+        }
+        #container article{
+            min-width: 356px; min-height: 172px;
+            width: 20vw; height: 20vh;
+            padding: 5px;
+            position: absolute;
+            background-color: green;
+        }
+        #container article:nth-of-type(1){
+            background-color:#67E767;
+            z-index: 3;
+        }
+        #container article:nth-of-type(2){
+            background-color:#5178E4;
+        }
+        #container article:nth-of-type(3){
+            background-color:#EBB7D9;
+        }
+        :target{
+            z-index: 10 !important;
+        }
+
+        #container2{
+            width: 70vw; height: 40vh;
+            margin: auto;
+            margin-top: 50px;
+        }
+        input{
+            display: none;
+        }
+        label{
+            min-width: 71px;min-height:50px;
+            width: 5vw;height: 50px;
+            line-height:50px;
+            margin-left: 8px;
+            border-radius: 4px 4px 0px 0px;
+            display: inline-block;
+            background-color: #6C78BB;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+        input:checked+label{
+            background-color: #87CEFA;
+        }
+        input:checked+label+article{
+            z-index: 10;
+        }
+        #container2 article{
+            min-width: 427px; min-height:258px;
+            width: 30vw; height: 30vh;
+            padding: 5px;
+            position: absolute;
+            background-color: #ECD4B9;
+            font-weight: bold;
+        }
+        #container2 article:nth-of-type(1){
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul>
+            <li><a href="#p1">Primera</a></li>
+            <li><a href="#p2">Segunda</a></li>
+            <li><a href="#p3">Tercera</a></li>
+        </ul>
+        <article id="p1">Este es el contenido de la 1 PESTAÑA</article>
+        <article id="p2">Este es el contenido de la 2 PESTAÑA</article>
+        <article id="p3">Este es el contenido de la 3 PESTAÑA</article>
+    </div>
+    <div id="container2">
+        <input type="radio" name="radio" id="rd1" checked></input>
+        <label for="rd1">Radio 1</label>
+        <article>Este es el contenido del RADIO 1</article>
+        <input type="radio" name="radio" id="rd2"></input>
+        <label for="rd2">Radio 2</label>
+        <article>Este es el contenido del RADIO 2</article>
+        <input type="radio" name="radio" id="rd3"></input>
+        <label for="rd3">Radio 3</label>
+        <article>Este es el contenido del RADIO 3</article>
+        <input type="radio" name="radio" id="rd4"></input>
+        <label for="rd4">Radio 4</label>
+        <article>Este es el contenido del RADIO 4</article>
+        <input type="radio" name="radio" id="rd5"></input>
+        <label for="rd5">Radio 5</label>
+        <article>Este es el contenido del RADIO 5</article>
+    </div>
+</body>
+</html>
