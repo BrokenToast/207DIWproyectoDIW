@@ -18,18 +18,17 @@
             padding-top: 10px;;
         }
         /*icono hamburgesa*/
-        label[for="hamburgesa"]>div{
+        label[for="abrir"]{
             width: 50px; height: 50px;
             padding-top: 1px;
             border-radius: 10px;
             background-color:#666666;
         }
-        label[for="hamburgesa"]>div>div{
+        label[for="abrir"]>div>div{
             width: 30px; height: 3px;
             margin: 10px;
             margin-left: 10px;
             background-color: white;
-            box-shadow: 0px 0px 1px 2px #B4B4B4;
         }
         /*Navegador*/
         nav{
@@ -62,6 +61,16 @@
             color: white;
             text-decoration: none;
         }
+        label[for="salir"]{
+            width:100vw; height: 100vh;
+            padding-top: 4%;
+            padding-left: 11%;
+            position: absolute;
+            top:0;left:0;
+            color: white;
+            font-size: 1.5em;
+
+        }
         /*Mecanicas*/
         li:hover{
             background-color:#EE82EE;
@@ -74,14 +83,17 @@
 <body>
     <div id="container">
         <nav>
-            <label for="hamburgesa">
+            <label for="abrir">
                 <div>
                     <div></div>
                     <div></div>
                     <div></div>
-                </div>     
+                </div>  
+                <p>todo</p>  
             </label>
-            <input type="checkbox" name="hamburgesa" id="hamburgesa">
+            <input type="radio" name="hamburgesa" id="abrir">
+            <label for="salir">X</label>
+            <input type="radio" name="hamburgesa" id="salir">
             <div id="submenu">
                 <ul>
                     <li><a href="">Inicio</a></li>

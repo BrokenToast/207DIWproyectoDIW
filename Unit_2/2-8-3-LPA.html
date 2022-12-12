@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*global*/
+        *{
+            margin:0;padding:0;box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: #34495E;
+        }
+        #container{
+            padding-top: 10px;;
+        }
+        /*icono hamburgesa*/
+        label[for="hamburgesa"]>div{
+            width: 50px; height: 50px;
+            padding-top: 1px;
+            border-radius: 10px;
+            background-color:#666666;
+        }
+        label[for="hamburgesa"]>div>div{
+            width: 30px; height: 3px;
+            margin: 10px;
+            margin-left: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 1px 2px #B4B4B4;
+        }
+        /*Navegador*/
+        nav{
+            padding:10px;
+            border: 2px solid white;
+            position: relative;
+            background-color: #297777;
+        }
+        input{
+            display: none;
+        }
+            /*Submenu*/
+        #submenu{
+            position: absolute;
+            top: 103%;
+            left: -20%;
+            transition: all 0.3s ease-in-out;
+        }
+        #submenu ul{
+            min-width:98.9px;min-height:464px;
+            width: 10vw;height: 50vh;
+            background-color: #5C867A;
+            list-style: none;
+        }
+        #submenu li{
+            padding: 10px;
+            border-bottom: 1px solid white;
+        }
+        #submenu a{
+            color: white;
+            text-decoration: none;
+        }
+        /*Mecanicas*/
+        li:hover{
+            background-color:#EE82EE;
+        }
+        input:checked~#submenu{
+            left: -2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <label for="hamburgesa">
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div> 
+            </label>
+            <input type="checkbox" name="hamburgesa" id="hamburgesa">
+            <div id="submenu">
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Alumnos</a></li>
+                    <li><a href="">Secretaria</a></li>
+                    <li><a href="">Profesorado</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>
