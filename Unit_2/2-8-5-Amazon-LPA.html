@@ -15,20 +15,34 @@
             background-color: #34495E;
         }
         #container{
-            padding-top: 10px;;
+            padding-top: 10px;
         }
         /*icono hamburgesa*/
         label[for="abrir"]{
-            width: 50px; height: 50px;
+            height: 50px;
             padding-top: 1px;
+            padding-right: 4px;
+            display: inline-block;
             border-radius: 10px;
             background-color:#666666;
+        }
+        label[for="abrir"]>div{
+            display: inline-block;
         }
         label[for="abrir"]>div>div{
             width: 30px; height: 3px;
             margin: 10px;
             margin-left: 10px;
             background-color: white;
+        }
+        label[for="abrir"]>p{
+            line-height: 100%;
+            vertical-align: 70%;
+            display: inline;
+            position: relative;
+            font-size: 1.5em;
+            color: white;
+            font-weight: bold;
         }
         /*Navegador*/
         nav{
@@ -37,13 +51,12 @@
             position: relative;
             background-color: #297777;
         }
-        input{
-            display: none;
-        }
+
             /*Submenu*/
         #submenu{
+            padding-top: 4%;
             position: absolute;
-            top: 103%;
+            top: 0%;
             left: -20%;
             transition: all 0.3s ease-in-out;
         }
@@ -62,21 +75,29 @@
             text-decoration: none;
         }
         label[for="salir"]{
-            width:100vw; height: 100vh;
-            padding-top: 4%;
-            padding-left: 11%;
+            width:99vw; height: 100vh;
+            display: none;
+            padding-top: 40%;
+            padding-left: 105%;
             position: absolute;
             top:0;left:0;
             color: white;
             font-size: 1.5em;
 
         }
+        input{
+            display: none;
+        }
+        #salir
         /*Mecanicas*/
         li:hover{
             background-color:#EE82EE;
         }
-        input:checked~#submenu{
+        #abrir:checked~#submenu{
             left: -2px;
+        }
+        #abrir:checked~#submenu>label{
+            display: inline-block;
         }
     </style>
 </head>
@@ -88,12 +109,10 @@
                     <div></div>
                     <div></div>
                     <div></div>
-                </div>  
+                </div>
                 <p>todo</p>  
             </label>
             <input type="radio" name="hamburgesa" id="abrir">
-            <label for="salir">X</label>
-            <input type="radio" name="hamburgesa" id="salir">
             <div id="submenu">
                 <ul>
                     <li><a href="">Inicio</a></li>
@@ -101,6 +120,8 @@
                     <li><a href="">Secretaria</a></li>
                     <li><a href="">Profesorado</a></li>
                 </ul>
+                <label for="salir">X</label>
+                <input type="radio" name="hamburgesa" id="salir">
             </div>
         </nav>
     </div>
