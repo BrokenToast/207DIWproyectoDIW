@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Globales*/
+        *{
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+        }
+        /*boton*/
+         label[for="open"]{
+            width: 100px; height: 50px;
+            line-height: 50px;
+            margin-top: 10px;
+            margin-left: 30px;
+            border-radius: 5px;
+            display: block;
+            background-color: #232F3E;
+            color: white;
+            text-align: center;
+            cursor:pointer;
+            font-size: 1.2em;
+            font-weight: 600;
+         }
+         /*menu*/
+         ul{
+            width: 346px; height: 100%;
+            list-style: none;
+            position: absolute;
+            top: 0; left:-800px;
+            background-color: white;
+            z-index: 10;
+            transition: all 0.3s ease-in-out;
+            overflow: scroll;
+         }
+         ul>a{
+            padding: 8px 0px 8px 10px;
+            display: block;
+            background-color: #232F3E;
+            text-decoration: none;
+         }
+         ul h2{
+            color: white;
+         }
+         ul>p{
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+         }
+         ul>li{
+            padding: 15px;
+         }
+         label[for="close"]{
+            width: 100%;height: 100vh;
+            display: none;
+            position: absolute;
+            top: 0;
+            background-color:#232f3eb7;
+            color: white;
+            font-size: 2em;
+            z-index: 1;
+         }
+         label[for="close"]>span{
+            padding-left: 360px;
+            cursor: pointer;
+         }
+         input{
+            display: none;
+         }
+         ul>hr{
+            border-top: 1px gray solid;
+            display: block;
+         }
+         /*Mecanicas menu*/
+         #open:checked~ul{
+            left: 0;
+         }
+         #open:checked~label[for="close"]{
+            display: block;
+         }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="open">Todos</label>
+        <input type="radio" name="menu" id="open">
+        <ul>
+            <a href=""><h2>Hola,identifícate</h2></a>
+            <p>Tendencias</p>
+            <li>Lo mas vendido</li>
+            <li>Utlimas Novedades</li>
+            <li>Productos del momento</li>
+            <hr>
+            <p>Contenido y Dispositivos Digitales</p>
+            <li>Amazon Prime Videos</li>
+            <li>Amazon Music</li>
+            <li>Amazon Photos</li>
+            <li>Echo y  Alexa</li>
+            <li>Amazon Fire TV</li>
+            <li>E-readers y eBooks Kindle</li>
+            <li>Tablets Fire</li>
+            <li>Appstore para Android</li>
+            <li>Audible audiolibros y Podcast</li>
+            <p>Buscar Por Departamento</p>
+            <li>Libros</li>
+            <li>Cine, TV y Musica</li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <label for="close"><span>x</span></label>
+        <input type="radio" name="menu" id="close">
+    </div>
+</body>
+</html>

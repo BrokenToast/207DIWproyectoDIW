@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*global*/
+        *{
+            margin:0;padding:0;box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        /*Botom*/
+        label[for="open"]{
+            width: 80px; height: 40px;
+            line-height: 40px;
+            margin: 10px;
+            border-radius: 6px;
+            display: block;
+            background-color: #232F3E;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+        /*Menu*/
+        ul:nth-of-type(1){
+            width: 212px; height: 100vh;
+            position: absolute;
+            top: 0; left: -16%;
+            background-color: white;
+            z-index: 10;
+            background-color: #7C399C;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+        ul>a{
+            display: block;
+            padding: 3%;
+            background-color: #232F3E;
+            text-decoration: none;
+            color: white;
+            font-size: 0.7em;
+        }
+        ul>li,p{
+            padding-bottom: 4%;
+            background-color: white;
+        }
+        ul>li{
+            color: #7C399C;
+        }
+        ul button{
+            background-color: transparent;
+            border: none;
+            color: #7C399C;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        label[ for="close" ]{
+            width: 100vw;height: 100vh;
+            display: none;
+            position: absolute;
+            left: 0;top: 0;
+            background-color: #303031a9;
+            color: black;
+        }
+        label[ for="close" ]>span{
+            margin-left: 220px;
+            margin-top: 15px;
+            color: white;
+            font-size: 2em;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        #video{
+            display: block;
+            position: absolute;
+            left:220px;top: 33px;
+            background-color: #7C399C;
+            list-style: none;
+        }
+        input{
+            display: none;
+        }
+        /*Mecanicas*/
+        #open:checked~ul{
+            left:0;
+        }
+        #open:checked~label[ for="close" ]{
+            display: block;
+        }
+        #openVideo:checked~ul{
+            left: 0%;
+        }
+    </style>
+</head>
+<body>
+    <label for="open">Todos</label>
+    <input type="radio" name="menu" id="open">
+    <ul id="menuP">
+        <a href=""><h2>Hola,identifícate</h2></a>
+        <p>Tendencias</p>
+        <li>Lo mas vendido</li>
+        <li>Utlimas Novedades</li>
+        <li>Productos del momento</li>
+        <p>Contenido y Dispositivos Digitales</p>
+        <li><label for="openVideo">Amazon Prime Videos</label>
+            <input type="radio" name="video" id="openVideo">
+            <ul id="video">
+                <p><label for="closeVideo">Menu Principal</label></p>
+                <hr>
+                <p>Amazon Prime Video</p>
+                <li>Todos los videos</li>
+                <li>Peliculas</li>
+                <li>Series</li>
+            </ul>
+            <input type="radio" name="video" id="closeVideo">
+        </li>
+    </ul>
+    <label for="close"><span>x</span></label>
+    <input type="radio" name="menu" id="close">
+</body>
+</html>
