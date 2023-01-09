@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-8-7-efectos Before After</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 40vw;
+            margin: 10px auto;
+            
+            padding:5%;
+        }
+        /*Apartado1*/
+        div:nth-of-type(1){
+            background-color: #E282F0;
+        }
+        div>button{
+            padding: 2% 4%;
+            border: none;
+            border-radius: 0;
+            margin:0 auto;
+            display: block;
+            position: relative;
+            background-color: #184040;
+            font-size: 1.5em;
+            color: white;
+        }
+        div>button:nth-child(2){
+            margin-top: 20%;
+            overflow: hidden;
+        }
+            /*Boton 1*/
+            div>button:nth-of-type(1)::before{
+                content: "";
+                width:0; height: 4px;
+                display: block;
+                position: absolute;
+                bottom:15%;
+                left: 50%;
+                background-color: white;
+                transition: all 0.2s ;
+            }
+            div>button:nth-of-type(1):hover:before{
+                width: 40%;
+            }
+            div>button:nth-of-type(1):after{
+                content: "";
+                width:0;height: 4px;
+                display: block;
+                position: absolute;
+                bottom:15%;
+                right: 50%;
+                background-color: white;
+                transition: all 0.2s ;
+            }
+            div>button:nth-of-type(1):hover::after{
+                width: 40%;
+            }
+            /*Boton 2*/
+            div>button:nth-of-type(2)::before{
+                content: "";
+                width:4px; height: 0;
+                display: block;
+                position: absolute;
+                bottom:0;
+                left: 0;
+                background-color: white;
+                transition: all 0.2s ;
+            }
+            div>button:nth-of-type(2):hover:before{
+                height: 100%;
+            }
+            div>button:nth-of-type(2):after{
+                content: "";
+                width:4px;height: 0;
+                display: block;
+                position: absolute;
+                bottom:0;
+                right: 0%;
+                background-color: white;
+                transition: all 0.2s ;
+            }
+            div>button:nth-of-type(2):hover::after{
+                height: 100%;
+            }
+    </style>
+</head>
+<body>
+    <div>
+        <button>Boton</button>
+        <button>Boton2</button>
+    </div>
+</body>
+</html>
