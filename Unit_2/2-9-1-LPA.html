@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-9-1-LPA</title>
+    <style>
+        /*Globales*/
+        *{
+            padding: 0;margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            background-color: #808080;
+            padding: 7px;
+            /*Flex-flox: engloba wrap y direction(Primero el direction y el segundo warp) seleciona el eje de trabajo de flex*/
+            flex-flow: column wrap;
+            gap: 10px;
+        }
+        body *{
+            border-radius: 10px;
+        }
+        /*Encabezado*/
+        header{
+            flex: 1 0 23vh;
+            display: flex;
+            background-color: #ADFB95;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        header>*{
+            flex: 0 1 11%;
+            display: flex;
+        }
+        header>input{
+            height: 30%;
+            flex: 0 1 16%;
+        }
+        header>p{
+            height: 100;
+            background-color: #5EB8B8;
+        }
+        header>img{
+            
+        }
+        /*Contenido*/
+        main{
+
+            display: flex;
+            gap: 0.5%;
+        }
+        main>*{
+        }
+        main>section{
+            
+            flex: 1 0 60%; /*Primer parametros shirnk, segundo grow, tercero basic*/
+            display: block;
+            background-color: #CA1341;
+        }
+        main>nav{
+            flex: 1 0 20%;
+        }
+        main>nav:nth-of-type(1){
+            background-color: #EE7F54;
+        }
+        main>nav:nth-of-type(2){
+            background-color: #F6D702;
+        }
+        /*Pie de pagina*/
+        footer{
+            display: flex;;
+            background-color: #D4A0E0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="http://picsum.photos/id/14/100/100" alt="">
+        <input type="text" name="buscar" placeholder="Buscar">
+        <img src="http://picsum.photos/id/15/100/100" alt="">
+        <p>Header</p>
+    </header>
+    <main>
+        <nav>
+            <p>nav</p>
+            <p>nav</p>
+            <p>nav</p>
+            <p>nav</p>
+        </nav>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <nav>
+            aside
+        </nav>
+    </main>
+    <footer>
+        <p>footer</p>
+    </footer>
+</body>
+</html>

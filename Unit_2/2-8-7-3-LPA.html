@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-8-7-efectos Before After</title>
+    <style>
+        /*Glabales*/
+        *{
+            box-sizing: border-box;
+            margin: 0;padding: 0;
+            font-family: sans-serif;
+        }
+        body{
+            padding-top: 20%;
+            padding-left: 40%;
+        }
+        div{
+            display: inline-block;
+            padding: 1%;
+        }
+        div::after{
+            content: "";
+            height: 0; width: 0;
+            display: block;
+            position: absolute;
+        }
+        div::before{
+            height: 0; width: 0;
+            content: "";
+            display: block;
+            position: absolute;
+        }
+        /*Bloque 1*/
+        div:nth-of-type(1){
+            width: 7vw; 
+            min-width: 158px; min-height: 112px;
+            border-radius: 20px;
+            position: relative;
+            background-color: #D89A43;
+        }
+        div:nth-of-type(1)>*{
+            display: block;
+        }
+        strong{
+            margin-right: 31%;
+        }
+        img{
+            margin: 10px auto;
+        }
+        div:nth-of-type(1)::after{
+            top: 100%; left: 15%;
+            border-top: 15px solid #FA8071;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        }
+        div:nth-of-type(1)::before{
+            bottom: 100%; left: 35%;
+            border-top: 30px solid transparent;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 30px solid #6B59D3;
+        }
+
+        /*Bloque 2*/
+        div:nth-of-type(2){
+            width: 10vw;min-width: 215px; min-height: 42px;
+            border-radius: 10px;
+            position: relative;
+            background-color: #444444;
+            color: white;
+        }
+        div:nth-of-type(2)::after{
+            top: 100%; left: 10%;
+            border-top: 20px solid #185bec;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+        }
+        div:nth-of-type(2)::before{
+            bottom: 100%; left: 70%;
+            border-top: 20px solid transparent;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid #0c11ff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p><strong>caja</strong>parrafo1</p>
+        <img src="http://picsum.photos/id/15/50/50" alt="">
+    </div>
+    <div>
+        <p>A</p>
+    </div>
+</body>
+</html>

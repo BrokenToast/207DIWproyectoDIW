@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-8-7-efectos Before After</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 200px; height: 30px;
+            border-radius: 100%;
+            margin: 15% auto;
+            display: block;
+            box-shadow: 100px 180px 10px rgba(0, 0, 255, 0.849); 
+        }
+        div::after{
+            content: "";
+            width: 200px; height: 200px;
+            border-radius: 100px;
+            display: block;
+            background: radial-gradient(at 0% 0%,#F7FF01 20%, #0800ff 70%);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
