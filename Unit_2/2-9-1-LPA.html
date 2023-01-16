@@ -16,7 +16,8 @@
             background-color: #808080;
             padding: 7px;
             /*Flex-flox: engloba wrap y direction(Primero el direction y el segundo warp) seleciona el eje de trabajo de flex*/
-            flex-flow: column wrap;
+            flex-flow: row nowrap;
+            flex: 1 1 100vh;
             gap: 10px;
         }
         body *{
@@ -24,50 +25,23 @@
         }
         /*Encabezado*/
         header{
-            flex: 1 0 23vh;
+            flex: 1 0 14vh;
             display: flex;
             background-color: #ADFB95;
             justify-content: space-evenly;
             align-items: center;
         }
-        header>*{
-            flex: 0 1 11%;
-            display: flex;
-        }
         header>input{
-            height: 30%;
-            flex: 0 1 16%;
+            height: 30%
         }
         header>p{
-            height: 100;
+            width: 100px;height: 100px;
+            display: flex;
+            justify-content: center;
             background-color: #5EB8B8;
         }
-        header>img{
-            
-        }
         /*Contenido*/
-        main{
 
-            display: flex;
-            gap: 0.5%;
-        }
-        main>*{
-        }
-        main>section{
-            
-            flex: 1 0 60%; /*Primer parametros shirnk, segundo grow, tercero basic*/
-            display: block;
-            background-color: #CA1341;
-        }
-        main>nav{
-            flex: 1 0 20%;
-        }
-        main>nav:nth-of-type(1){
-            background-color: #EE7F54;
-        }
-        main>nav:nth-of-type(2){
-            background-color: #F6D702;
-        }
         /*Pie de pagina*/
         footer{
             display: flex;;
@@ -82,22 +56,20 @@
         <img src="http://picsum.photos/id/15/100/100" alt="">
         <p>Header</p>
     </header>
-    <main>
-        <nav>
-            <p>nav</p>
-            <p>nav</p>
-            <p>nav</p>
-            <p>nav</p>
-        </nav>
-        <section>
-            <div></div>
-            <div></div>
-            <div></div>
-        </section>
-        <nav>
-            aside
-        </nav>
-    </main>
+    <nav>
+        <p>nav</p>
+        <p>nav</p>
+        <p>nav</p>
+        <p>nav</p>
+    </nav>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <nav>
+        aside
+    </nav>
     <footer>
         <p>footer</p>
     </footer>
