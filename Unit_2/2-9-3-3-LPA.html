@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+            box-sizing: content-box;
+        }
+        nav{
+            width: 80%; 
+            margin: 3% auto;
+            background-color: #536448;
+            display: flex;
+            flex-flow: row nowrap;           
+        }
+        a{
+            padding: 2%;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+        nav>*{
+            flex: 1 1 0;height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s;
+        }
+        a:nth-of-type(1){
+            background-color: #266400;
+            
+        }
+        a:nth-of-type(2){
+            background-color: #F1A500;
+        }
+        a:nth-of-type(3){
+            background-color: #5882B5;
+        }
+        a:nth-of-type(4){
+            background-color: #770282;
+        }
+        p{
+            transform: rotateZ(-90deg);
+            transition: all 1s;
+        }
+        a:hover{
+            flex: 1 1 40%;
+        }
+        a:hover>p{
+            transform: rotateZ(0deg);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#"><p>Centro</p></a>
+        <a href="#"><p>Profesores</p></a>
+        <a href="#"><p>Asignaturas</p></a>
+        <a href="#"><p>Cursos</p></a>
+    </nav>
+</body>
+</html>

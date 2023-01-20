@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0; margin: 0;
+            box-sizing: content-box;
+            font-family: sans-serif;
+        }
+        #table1,#table2{
+            display: flex;
+            flex-flow: row wrap;
+            padding: 0 2% 2% 2%;
+        }
+        /*Tabla 1*/
+        #table1>*{
+            flex: 1 1 20%; height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+        #table1>h1{
+            flex: 1 1 100%;
+        }
+        #table1>div:nth-child(-n+4){
+            background-color:#852DE4;
+        }
+        #table1>div:nth-child(2n+5){
+            background-color:#D7B886;
+        }
+        #table1>div:nth-child(2n+6){
+            background-color:#76FFFE;
+            
+        }
+        /*Tabla 2*/
+        #table2>*{
+            height: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }       
+        #table2>div:nth-child(-n+4){
+            flex: 1 1 24%;
+        }
+        #table2>div:nth-child(){
+            flex: 1 1 30%;
+        }
+        #table12>div:nth-child(){
+            flex: 1 1 30%;
+        }
+        #table12>div:nth-child(-n+4){
+            flex: 1 1 30%;
+        }
+        #table12>div:nth-child(-n+4){
+            flex: 1 1 30%;
+        }
+        #table12>div:nth-child(-n+4){
+            flex: 1 1 30%;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <h1>Tabla1</h1>
+        <div id="table1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+        </div>
+        <h1>Tabla2</h1>
+        <div id="table2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div><img src="http://picsum.photos/id/14/100/100" alt=""></div>
+            <div><img src="http://picsum.photos/id/14/100/100" alt=""></div>
+            <div><img src="http://picsum.photos/id/14/100/100" alt=""></div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div><img src="http://picsum.photos/id/14/100/100" alt=""></div>
+            <div><img src="http://picsum.photos/id/14/100/100" alt=""></div>
+            <div><img src="http://picsum.photos/id/14/100/100" alt=""></div>
+            <div><img src="http://picsum.photos/id/14/100/100" alt=""></div>
+            <div><img src="http://picsum.photos/id/14/100/100" alt=""></div>
+            <div><img src="http://picsum.photos/id/14/100/100" alt=""></div>
+            <div><img src="http://picsum.photos/id/14/100/100" alt=""></div>
+            <div>20</div>
+            <div>21</div>
+            <div>22</div>
+            <div>23</div>
+            <div>24</div>
+            <div>25</div>
+        </div>
+    </div>
+</body>
+</html>
