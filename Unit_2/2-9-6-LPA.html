@@ -8,7 +8,7 @@
     <style>
         *{
             padding: 0; margin: 0;
-            box-sizing: content-box;
+            box-sizing: border-box;
             font-family: sans-serif;
         }
         #table1,#table2{
@@ -18,7 +18,7 @@
         }
         /*Tabla 1*/
         #table1>*{
-            flex: 1 1 20%; height: 30px;
+            flex: 1 1 25%; height: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -44,24 +44,51 @@
             justify-content: center;
             align-items: center;
             border: 1px solid black;
-        }       
+        }     
+        #table2 img{
+            width: 50px;
+        }  
+        /*Primera fila*/
         #table2>div:nth-child(-n+4){
             flex: 1 1 24%;
+            background-color: #A2CD26;
         }
-        #table2>div:nth-child(){
-            flex: 1 1 30%;
+        /*Segundoa fila*/
+        #table2>div:nth-child(n+5):nth-child(-n+7){
+            flex: 0 0 25%;
+            background-color: #D7B886;
         }
-        #table12>div:nth-child(){
-            flex: 1 1 30%;
+        #table2>div:nth-of-type(6){
+            flex: 1 0 49.5% !important;
         }
-        #table12>div:nth-child(-n+4){
-            flex: 1 1 30%;
+        /*tercera fila*/
+        #table2>div:nth-child(n+8):nth-child(-n+12){
+            flex: 1 1 25%;
+            background-color: #76FFFE;
         }
-        #table12>div:nth-child(-n+4){
-            flex: 1 1 30%;
+        #table2>div:nth-child(n+9):nth-child(-n+11){
+            flex: 1 1 calc(50%/3) !important;
         }
-        #table12>div:nth-child(-n+4){
-            flex: 1 1 30%;
+        /*Cuarta fila*/
+        #table2>div:nth-child(n+13):nth-child(-n+19){
+            flex: 1 1 25%;
+            background-color: #EF8C03;
+        }
+        #table2>div:nth-child(n+13):nth-child(-n+17){
+            flex: 1 1 calc(25%/5) !important;
+        }
+        #table2>div:nth-child(18){
+            flex: 1 1 50% !important; 
+        }
+        /*Quinto fila*/
+        #table2>div:nth-child(n+20):nth-child(-n+25){
+            background-color: #BF5C5E;
+        }
+        #table2>div:nth-of-type(20),div:nth-of-type(21),div:nth-of-type(24),div:nth-of-type(25){
+            flex: 1 1 calc(25%/2) !important;
+        }
+        #table2>div:nth-of-type(22),div:nth-of-type(23){
+            flex: 1 1 calc(50%/2) !important;
         }
     </style>
 </head>
