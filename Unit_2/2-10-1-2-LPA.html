@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Echo  con flex */
+        /* *{
+            padding: 0; margin: 0;
+            box-sizing: content-box;
+            font-family: sans-serif;
+        }
+        #root{
+            width: 90vw; height: 90vh;
+            margin: 5px auto;
+            display: flex;
+            flex-flow: column wrap;
+        }
+        #root *:not(section){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            flex: 1 1 100%; width: 50%;
+            background-color: beige;
+        }
+        section{
+            flex: 0 0 80%; width: 25%;
+            display: flex;
+        }
+        section>*{
+            width: 50%;
+        }
+        article:nth-of-type(1){
+            background-color: black;
+            color: white;
+        }
+        article:nth-of-type(2){
+            background-color: #6B4B4B;
+        }
+        footer{
+            flex:0 0 20%;
+            background-color: gainsboro;
+        }
+        nav{
+            flex: 0 0 30%; width: 25%;
+            background-color: coral;
+        }
+        aside{
+            flex: 0 0 70%; width: 25%;
+            background-color: purple;
+        } */
+        /*Echo  con grid*/
+        *{
+            padding: 0; margin: 0;
+            box-sizing: content-box;
+            font-family: sans-serif;
+        }
+        #root{
+            width: 90vw; height: 90vh;
+            margin: 5px auto;
+            display: grid;
+            grid-template-columns: 5fr 2.5fr 2.5fr;
+            grid-template-rows: 2fr 5fr 3fr;
+        }
+        #root *:not(section){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            grid-row: 1/4;
+            grid-column: 1/1;
+            background-color: beige;
+        }
+        section{
+            grid-row: 1/3;
+            grid-column: 2/3;
+            display: flex;
+        }
+        section>*{
+            width: 50%;
+        }
+        article:nth-of-type(1){
+            background-color: black;
+            color: white;
+        }
+        article:nth-of-type(2){
+            background-color: #6B4B4B;
+        }
+        footer{
+            grid-row: 3/4;
+            grid-column: 2/3;
+            background-color: gainsboro;
+        }
+        nav{
+            background-color: coral;
+        }
+        aside{
+            grid-row: 2/4;
+            grid-column: 3/3;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <main>
+            main
+        </main>
+        <section>
+            <article>articulo1</article>
+            <article>articulo2</article>
+        </section>
+        <footer>
+            footer
+        </footer>
+        <nav>
+            nav
+        </nav>
+        <aside>
+            aside
+        </aside>
+    </div>
+</body>
+</html>
