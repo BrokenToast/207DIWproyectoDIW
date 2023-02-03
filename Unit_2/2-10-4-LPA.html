@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-10-4</title>
+    <style>
+        /*Global*/
+        *{
+            padding: 0; margin: 0;
+            box-sizing: content-box;
+            font-family: sans-serif;
+        }
+        #root{
+            width: 100vw; height: 100vh;
+        }
+        nav{
+            height: 100%;
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 5fr;
+        }
+        label{
+            border: 2px solid red;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: #566B30;
+            color: white;
+            font-weight: bold;
+        }
+        nav>div{
+            grid-column: 3/5;
+            grid-row: 2/6;
+            display: none;
+            grid-template-rows: 2fr 2fr 2fr 2fr;
+            grid-template-columns: 3fr 3fr;
+        }
+        label:hover{
+            background-color: #AE92CD;
+            color: black;
+        }
+        input{
+            display: none;
+        }
+        .sub2{
+            display: none;
+        }
+        .sub1{
+            display: grib;
+        }
+        /*Menu principal*/
+        #Mitem3:checked~div{
+            display: grid;
+        }
+        label[for="Mitem4"]{
+            grid-column:4/5 ;
+            grid-row:1/2;
+        }
+        label[for="Mitem5"]{
+            grid-column:5/6 ;
+            grid-row:1/2;
+        }
+        /*submenu1*/
+        label[for="sub1item1"]{
+            grid-column:1/2 ;
+            grid-row:1/2;
+        }
+        label[for="sub1item2"]{
+            grid-column:1/2 ;
+            grid-row:2/3;
+        }
+        #sub1item2:checked~div .sub2{
+            display: grid;
+        }
+        label[for="sub1item3"]{
+            grid-column:1/2;
+            grid-row:3/4;
+        }
+        /*submenu2*/
+        label[for="sub2item1"]{
+            grid-column:2/5 ;
+            grid-row:2/3;
+        }
+        label[for="sub2item2"]{
+            grid-column:2/4 ;
+            grid-row:3/4;
+        }
+        label[for="sub2item3"]{
+            grid-column:2/4 ;
+            grid-row:4/5;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <nav>
+            <!-- Lo que no se ve -->
+            <input type="radio" name="menu" id="Mitem1">
+            <input type="radio" name="menu" id="Mitem2">
+            <input type="radio" name="menu" id="Mitem3">
+            <input type="radio" name="menu" id="Mitem4">
+            <input type="radio" name="menu" id="Mitem5">
+
+            <input type="radio" name="sub1" id="sub1item1">
+            <input type="radio" name="sub1" id="sub1item2">
+            <input type="radio" name="sub1" id="sub1item3">
+
+            <input type="radio" name="sub2" id="sub2item1">
+            <input type="radio" name="sub2" id="sub2item2">
+            <input type="radio" name="sub2" id="sub2item3">
+            <!-- Lo que se ve -->
+            <label for="Mitem1" class="menu">Opcion 1</label>
+            <label for="Mitem2" class="menu">Opcion 2</label>
+            <label for="Mitem3" class="menu">Opcion 3</label>
+
+            <div>
+                <label for="sub1item1" class="sub1">subop1</label>
+                <label for="sub1item2" class="sub1">subop2</label>
+                <label for="sub2item1" class="sub2">sbm2Opcion 1</label>
+                <label for="sub2item2" class="sub2">sbm2Opcion 2</label>
+                <label for="sub2item3" class="sub2">sbm2Opcion 3</label>
+                <label for="sub1item3" class="sub1">subop3</label>
+            </div>
+
+            <label for="Mitem4" class="menu">Opcion 4</label>
+            <label for="Mitem5" class="menu">Opcion 5</label>
+        </nav>
+    </div>
+</body>
+</html>
