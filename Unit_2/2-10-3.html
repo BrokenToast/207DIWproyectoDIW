@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0; margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        #root{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:1fr;
+            justify-items: center;
+        }
+        /*Contenido*/
+        main{
+            padding: 1%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            place-items: center;
+            gap: 1%;
+        }
+        /*Tarjetas*/
+        .tarjeta{
+            width: 100%;
+            display: grid;
+        }
+        .tarjeta>img{
+            width: 100%;
+            object-fit: fill;
+        }
+        .tarjeta:nth-of-type(1){
+            background-color: #C8C8C8;
+        }
+        .tarjeta:nth-of-type(2){
+            background-color: #E67474;
+        }
+        .tarjeta:nth-of-type(3){
+            background-color: #52AF9A;
+        }
+        .tarjeta:nth-of-type(4){
+            background-color: #47479C;
+        }
+        .tarjeta:nth-of-type(5){
+            background-color: #542355;
+        }
+        .tarjeta:nth-of-type(6){
+            background-color: #ABC830;
+        }
+        .tarjeta:hover>img{
+            transform: scale(150%);
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <head>
+            <h1>Galeria de tarjetas con imagen</h1>
+        </head>
+        <main>
+            <div class="tarjeta">
+                <h3>El Titulo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum ad tenetur hic explicabo animi, quaerat facilis dolorum id tempora, ipsum impedit voluptatum, unde deserunt? Necessitatibus dicta a eius quisquam error!</p>
+                <img src="http://picsum.photos/id/14/600/400" alt="">
+            </div>
+            <div class="tarjeta">
+                <h3>El Titulo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum ad tenetur hic explicabo animi, quaerat facilis dolorum id tempora, ipsum impedit voluptatum, unde deserunt? Necessitatibus dicta a eius quisquam error!</p>
+                <img src="http://picsum.photos/id/15/600/400" alt="">
+            </div>
+            <div class="tarjeta">
+                <h3>El Titulo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum ad tenetur hic explicabo animi, quaerat facilis dolorum id tempora, ipsum impedit voluptatum, unde deserunt? Necessitatibus dicta a eius quisquam error!</p>
+                <img src="http://picsum.photos/id/16/600/400" alt="">
+            </div>
+            <div class="tarjeta">
+                <h3>El Titulo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum ad tenetur hic explicabo animi, quaerat facilis dolorum id tempora, ipsum impedit voluptatum, unde deserunt? Necessitatibus dicta a eius quisquam error!</p>
+                <img src="http://picsum.photos/id/17/600/400" alt="">
+            </div>
+            <div class="tarjeta">
+                <h3>El Titulo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum ad tenetur hic explicabo animi, quaerat facilis dolorum id tempora, ipsum impedit voluptatum, unde deserunt? Necessitatibus dicta a eius quisquam error!</p>
+                <img src="http://picsum.photos/id/18/600/400" alt="">
+            </div>
+            <div class="tarjeta">
+                <h3>El Titulo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum ad tenetur hic explicabo animi, quaerat facilis dolorum id tempora, ipsum impedit voluptatum, unde deserunt? Necessitatibus dicta a eius quisquam error!</p>
+                <img src="http://picsum.photos/id/19/600/400" alt="">
+            </div>
+        </main>
+    </div>
+</body>
+</html>
