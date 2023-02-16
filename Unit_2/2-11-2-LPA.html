@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0; margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            list-style: none;
+        }
+        #root{
+            width: 100%;height: 100vh;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1%;
+        }
+        ul{
+            height: 50px;
+            display: flex;
+        }
+        li{
+            margin: 5%;
+            padding: 5%;
+            align-self: center;
+        }
+        li>a{
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        /*Nav1*/
+        nav:nth-of-type(1){ 
+            background-color: #3FA46A;
+            overflow: hidden;
+        }
+        nav:nth-of-type(1) li{
+            padding-top: 12%;
+            padding-bottom: 12%;
+            border-top: 3px solid white;
+            border-bottom: 3px solid white;
+            transition: all 1s ease-in-out;
+        }
+        nav:nth-of-type(1) li:hover{
+            padding-top: 2%;
+            padding-bottom: 2%;
+            transition: all 1s ease-in-out;
+        }
+        /*Nav2*/
+        nav:nth-of-type(2){
+            background-color: #5175C0;
+        }
+        nav:nth-of-type(2) li{
+            padding: 0 5%;
+            transition: background-color 1s ease-in-out,
+            padding 1s ease-in-out,
+            color 0.5s ease-in-out 1s;
+        }
+        nav:nth-of-type(2) li:hover{
+            padding: 5% 5%;
+            background-color: rgba(255, 255, 255, 0.349);
+            transition: all 1s ease-in-out;
+        }
+        nav:nth-of-type(2) li:hover>a{
+            color: yellow;
+            transition: color 0.5s ease-in-out 1s;
+        }
+        /*Pruebas inline-block*/
+        article{
+            width: 500px;height: 400px;
+            margin: auto;
+            text-align: center;
+            background-color: gray;
+            font-size: 0;
+        }
+        section{
+            width: 125px; height: 300px;
+            display: inline-block;
+        }
+        section:nth-child(1){
+            background-color: cadetblue;
+        }
+        section:nth-child(2){
+            background-color: green;
+        }
+        section:nth-child(3){
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </nav>
+        <article>
+            <section>s1</section>
+            <section>s2</section>
+            <section>s3</section>
+        </article>
+    </div>
+</body>
+</html>

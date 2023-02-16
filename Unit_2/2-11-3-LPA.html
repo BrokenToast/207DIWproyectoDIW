@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0; margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        #root{
+            width: 100%;height: 100vh;
+            background-color: grey;
+        }
+        #x1:checked ~ #elice{
+            --v:1s;
+        }
+        #x2:checked ~ #elice{
+            --v:0.5s;
+        }
+        #x3:checked ~ #elice{
+            --v:0.25s;
+        }
+        #stop:checked ~ #elice{
+            --v:0s;
+        }
+        #elice{
+            width: 600px; height: 600px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            transition: 1s ease-in-out;
+            animation: rotar var(--v) linear infinite;
+        }
+        @keyframes rotar {
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        #elice>div{
+            width: 75px; height: 75px;
+            border-radius: 20px;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: red;
+            box-shadow: 0px 200px yellow,
+            200px 0px red,
+            -200px 0px red,
+            0px -200px yellow;
+        }
+
+        label{
+            font-size: 1.5em;
+            border: 2px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <section>
+            <h2>Selecciona la velocidad</h2>
+            <input type="radio" name="velocidad" id="x1">
+            <label for="x1">1x</label>
+            <input type="radio" name="velocidad" id="x2">
+            <label for="x2">2x</label>
+            <input type="radio" name="velocidad" id="x3">
+            <label for="z3">3x</label>
+            <input type="radio" name="velocidad" id="stop">
+            <label for="stop">Stop</label>
+            <article id="elice">
+                <div></div>
+            </article>
+        </section>
+    </div>
+</body>
+</html>

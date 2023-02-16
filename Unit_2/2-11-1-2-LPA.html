@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0; margin: 0;
+            box-sizing: content-box;
+            font-family: sans-serif;
+        }
+        #root{
+            width: 50%;
+            margin: 10% auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        img{
+            width: 100%;
+            border: 2px solid red;
+        }
+        #root>div{
+            width: 100%; height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 100%;
+            background-color: rgba(255, 0, 0, 0.411);
+        }
+        #root>div>h1{
+            position: absolute;
+            left: 100%;
+        }
+        #root>div>p{
+            width: 70%;
+            margin-top: 50px;
+            position: absolute;
+            left: 100%;
+        }
+        #root:hover>div{
+            left: 0px;
+            transition: left 1s ease;
+        }
+        #root:hover>div>h1{
+            left: 40%;
+            transition: left 1s ease 1s;  
+        }
+        #root:hover p{
+            left: 40%;
+            transition: left 1s ease 2s;  
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <img src="http://picsum.photos/id/16/600/400" alt="">
+        <div>
+            <h1>Titulo</h1>
+            <p>Esto es una prueba</p>
+        </div>
+    </div>
+</body>
+</html>
