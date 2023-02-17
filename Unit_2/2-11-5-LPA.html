@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0; margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        #root{
+            width:100%; height: 100vh;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #marco{
+            width: 50%; height: 40%;
+            padding: 2%;
+            background-color: #96C941;
+        }
+        #fondo{
+            width: 100%;height: 100%;
+            padding-bottom: 10%;
+            display: flex;
+            flex-flow: column;
+            justify-content: end;
+            align-items: center;
+            background-color: #7FFFD4;
+        }
+        #suelo{
+            position: relative;
+            width: 80%;
+            border-bottom:3px solid black;
+        }
+        #pelota{
+            width: 80px; height: 80px;
+            position: absolute;
+            bottom: 0;
+            border-radius:40px;
+            background-color: red;
+            transition: all 1s ease-in-out;
+        }
+
+        #marco:hover #pelota{
+            transform: translateY(-260%);
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div id="marco">
+            <div id="fondo">
+                <div id="suelo">
+                    <div id="pelota"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

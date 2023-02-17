@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0; margin: 0;
+            box-sizing: content-box;
+            font-family: sans-serif;
+        }
+        #root{
+            width: 100%; height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 800px;
+        }
+        article{
+            width: 200px; height: 300px;
+            margin: 2%;
+            position: relative;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transition: 1s linear;
+        }
+        section{
+            width: 100%;height: 100%;
+            margin: 1%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14em;
+            font-weight: bold;
+            color: white;
+        }
+        .uno{
+            background-color: blue;
+            position: absolute;
+            z-index: 1;
+        }
+        .dos{
+            background-color: red;
+            transform: rotateY(180deg);
+            z-index: 10;
+        }
+        article:hover{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <article>
+                <section class="uno">1</section>
+                <section class="dos">2</section>
+        </article>
+    </div>
+</body>
+</html>
