@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0; margin: 0;
+            box-sizing: content-box;
+            font-family: sans-serif;
+            --v:5s;
+        }
+        
+        #root{
+            width: 600px;height: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column;
+            text-align: center;
+            background-color: black;
+            color: white;
+            
+        }
+        #rodamiento{
+            width: 400px;height: 400px;
+            margin-top: 200px;
+            border-radius: 300px;
+            border:  10px dashed silver;
+            align-self: center;
+            background: radial-gradient(transparent 20%, silver 20%) padding-box;
+            animation: rotar var(--v) infinite linear;
+            animation-play-state: paused;
+        }
+        @keyframes rotar {
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        #on:checked ~ #rodamiento{
+            animation-play-state: running;
+        }
+        #x2:checked ~ #rodamiento{
+            --v:2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <h2>Rodamiento</h2>
+        <label for="on">ON</label>
+        <input type="radio" name="rd" id="on">
+        <label for="off">OFF</label>
+        <input type="radio" name="rd" id="off" checked>
+        <label for="x1">Velocidad X1</label>
+        <input type="radio" name="v" id="x1" checked>
+        <label for="x2">Velocadiad X2</label>
+        <input type="radio" name="v" id="x2">
+        <section id="rodamiento">
+        </section>
+    </div>
+</body>
+</html>

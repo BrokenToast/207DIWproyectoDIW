@@ -13,15 +13,22 @@
         }
         #root{
             width:100%; height: 100vh;
-            margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #3465A4;
         }
         #marco{
-            width: 50%; height: 40%;
+            min-height: 500px; min-width: 600px;
+            width: 50%; height: 70%;
             padding: 2%;
-            background-color: #96C941;
+            background-color: yellowgreen;
+            animation: fondo 2s ease infinite alternate;
+        }
+        @keyframes fondo {
+            to{
+                background-color: cornflowerblue;
+            }
         }
         #fondo{
             width: 100%;height: 100%;
@@ -33,21 +40,56 @@
             background-color: #7FFFD4;
         }
         #suelo{
+            height: 100%;
             position: relative;
             width: 80%;
             border-bottom:3px solid black;
         }
         #pelota{
-            width: 80px; height: 80px;
+            width: 60px; height: 60px;
             position: absolute;
             bottom: 0;
             border-radius:40px;
             background-color: red;
-            transition: all 1s ease-in-out;
+            animation: botar 1s infinite alternate linear;
         }
-
-        #marco:hover #pelota{
-            transform: translateY(-260%);
+        @keyframes botar {
+            0%{
+                bottom: 0px;
+                left: 0;
+            }
+            12.5%{
+                bottom: 40%;
+                left: 2.5%;
+            }
+            25%{
+                bottom: 85%;
+                left: 15%;
+            }
+            37.5%{
+                bottom: 40%;
+                left: 27.5%;
+            }
+            50%{
+                bottom: 0%;
+                left: 40%;
+            }
+            62.5%{
+                bottom: 40%;
+                left: 52.5;
+            }
+            75%{
+                bottom:85%;
+                left: 65%;
+            }
+            87.5%{
+                bottom:40%;
+                left: 75.5%;
+            }
+            100%{
+                bottom:0px;
+                left: 90%;
+            }
         }
     </style>
 </head>
