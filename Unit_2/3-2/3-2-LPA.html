@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    #aa{
+        clip-path: polygon(57% 18%, 41% 18%, 28% 23%, 26% 33%, 25% 43%, 26% 54%, 29% 64%, 38% 72%, 33% 78%, 25% 87%, 26% 92%, 34% 93%, 38% 89%, 45% 80%, 49% 75%, 58% 73%, 64% 79%, 68% 84%, 74% 89%, 81% 82%, 75% 72%, 68% 66%, 61% 61%, 54% 63%, 57% 57%, 66% 48%, 73% 42%, 74% 37%, 77% 37%, 84% 41%, 89% 44%, 93% 41%, 96% 36%, 88% 29%, 81% 23%, 76% 20%, 68% 23%, 63% 28%, 67% 32%, 63% 37%, 56% 41%, 53% 46%, 48% 51%, 45% 55%, 39% 55%, 36% 50%, 36% 42%, 37% 33%, 39% 27%);
+    }
+    </style>
+</head>
+<body>
+    <img id="aa" src="img-640.jpg" alt="hamburgo" > 
+    <picture>    
+        <source media="(max-width: 640px)"  srcset="http://picsum.photos/id/80/400/300/" alt="piñas"> 
+        <source media="(max-width: 1279px)" srcset="http://picsum.photos/id/85/650/350/" alt="tractor">              
+        <source media="(max-width: 1919px)" srcset="http://picsum.photos/id/26/1280/800/"alt="accesorios">        
+        <source media="(min-width: 1920px)" srcset="http://picsum.photos/id/27/1920/1200/"alt="1920px">  
+        <img src="http://picsum.photos/id/100/150/150/" alt="Las condiciones no se cumplen">   
+    </picture>   
+    <picture>
+        <source media="(max-width: 640px) and (orientation: portrait)" srcset="img-v.jpg" >             
+        <source media="(max-width: 640px) and (orientation:landscape)" srcset="img-h.jpg" >             
+        <source media="(min-width: 640px) and (max-width: 1279px)" ssrcset="img-640.jpg">             
+        <source media="(min-width: 1280px) and (max-width: 1920px)" srcset="img-1280.jpg">             
+        <source media="(min-width: 1920px)" srcset="img-1920.jpg"> 
+        <img src="img-640.jpg" alt="hamburgo" > 
+    </picture> 
+    <video controls autoplay mute width="400px" src="nieveBenavente_n.mp4"></video>
+    <video controls width="400px" src="vr1.mp4"></video>
+    <video controls width="400px" src="vr2.mp4"></video>
+    <audio controls autoplay src="m2.mp3"></audio>
+    <audio controls autoplay src="m3.ogg"></audio>
+    <audio controls autoplay src="m4.mp3"></audio>
+</body>
+</html>
