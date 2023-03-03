@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img1{
+            clip-path: ellipse(25% 40% at 46% 49%); 
+        }
+        #img2{
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); 
+        }
+        #img3{
+            clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);  
+        }
+        #img4{
+            -webkit-mask-image: url('coloiuris.png');
+        }
+        #img5{
+            -webkit-mask-image: linear-gradient(to top,transparent 5%,white);
+        }
+        #img6{
+            clip-path: url(#svgPath);  
+        }
+    </style>
+</head>
+<body>
+    <img id="img1" src="http://picsum.photos/id/26/700/500/" alt="">
+    <img id="img2" src="http://picsum.photos/id/27/700/500/" alt="">
+    <img id="img3" src="http://picsum.photos/id/28/700/500/" alt="">
+    <img id="img4" src="http://picsum.photos/id/29/700/500/" alt="">
+    <img id="img5" src="http://picsum.photos/id/30/700/500/" alt="">
+    <img id="img6" src="http://picsum.photos/id/34/700/500/" alt="">
+    <svg height="200" width="400">
+            <clipPath id="svgPath">
+                <path d="M215,100.3c97.8-32.6,90.5-71.9,336-77.6 c92.4-2.1,98.1,81.6,121.8,116.4c101.7,149.9,53.5,155.9,14.7,178c-96.4,54.9,5.4,269-257,115.1c-57-33.5-203,46.3-263.7,20.1 c-33.5-14.5-132.5-45.5-95-111.1C125.9,246.6,98.6,139.1,215,100.3z"/>
+            </clipPath>
+    </svg>
+</body>
+</html>
